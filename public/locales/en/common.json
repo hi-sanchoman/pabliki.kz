@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "Linklot",
+    "description": "A modern Next.js application"
+  },
+  "navigation": {
+    "home": "Home",
+    "posts": "Posts",
+    "create": "Create",
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "posts": {
+    "title": "Posts",
+    "create": "Create Post",
+    "empty": "No posts found",
+    "publish": "Publish immediately",
+    "form": {
+      "title": "Title",
+      "content": "Content",
+      "authorId": "Author ID"
+    },
+    "actions": {
+      "create": "Create Post",
+      "creating": "Creating...",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "errors": {
+      "fetch": "Failed to fetch posts",
+      "create": "Failed to create post"
+    }
+  },
+  "users": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password"
+    },
+    "errors": {
+      "emailInUse": "Email already in use",
+      "createFailed": "Failed to create user"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "submit": "Submit"
+  },
+  "auth": {
+    "logout": "Logout"
+  },
+  "profile": {
+    "profile": "Profile",
+    "theme": "Theme"
+  },
+  "lot": {
+    "all_links": "All Links",
+    "new_lot": "New Lot",
+    "add_to_lot": "Add to Lot"
+  },
+  "sort": {
+    "sort": "Sort",
+    "recent": "Recent",
+    "oldest": "Oldest",
+    "name_asc": "Name (A-Z)",
+    "name_desc": "Name (Z-A)",
+    "most_visited": "Most Visited"
+  },
+  "links": {
+    "quickly_save": "Quickly Save a Link",
+    "paste_link_description": "Paste a link, and we'll instantly fetch its title, preview, and details for you—quick like magic!",
+    "enter_url": "Enter URL here",
+    "add_link": "Add Link",
+    "open_in_new_tab": "Open in new tab"
+  },
+  "tags": {
+    "add_tag": "Add Tag"
+  }
+}

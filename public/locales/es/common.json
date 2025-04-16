@@ -1,0 +1,88 @@
+{
+  "app": {
+    "title": "Linklot",
+    "description": "Una aplicación moderna de Next.js"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "posts": "Publicaciones",
+    "create": "Crear",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "profile": "Perfil",
+    "logout": "Cerrar Sesión"
+  },
+  "posts": {
+    "title": "Publicaciones",
+    "create": "Crear Publicación",
+    "empty": "No se encontraron publicaciones",
+    "publish": "Publicar inmediatamente",
+    "form": {
+      "title": "Título",
+      "content": "Contenido",
+      "authorId": "ID del Autor"
+    },
+    "actions": {
+      "create": "Crear Publicación",
+      "creating": "Creando...",
+      "cancel": "Cancelar",
+      "edit": "Editar",
+      "delete": "Eliminar"
+    },
+    "errors": {
+      "fetch": "Error al cargar publicaciones",
+      "create": "Error al crear publicación"
+    }
+  },
+  "users": {
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "password": "Contraseña"
+    },
+    "errors": {
+      "emailInUse": "El correo electrónico ya está en uso",
+      "createFailed": "Error al crear usuario"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "success": "Éxito",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "cancel": "Cancelar",
+    "submit": "Enviar"
+  },
+  "auth": {
+    "logout": "Cerrar Sesión"
+  },
+  "profile": {
+    "profile": "Perfil",
+    "theme": "Tema"
+  },
+  "lot": {
+    "all_links": "Todos los Enlaces",
+    "new_lot": "Nuevo Lote",
+    "add_to_lot": "Añadir a Lote"
+  },
+  "sort": {
+    "sort": "Ordenar",
+    "recent": "Reciente",
+    "oldest": "Más Antiguo",
+    "name_asc": "Nombre (A-Z)",
+    "name_desc": "Nombre (Z-A)",
+    "most_visited": "Más Visitado"
+  },
+  "links": {
+    "quickly_save": "Guarda un Enlace Rápidamente",
+    "paste_link_description": "Pega un enlace y obtendremos instantáneamente su título, vista previa y detalles para ti, ¡rápido como por arte de magia!",
+    "enter_url": "Introduce URL aquí",
+    "add_link": "Añadir Enlace",
+    "open_in_new_tab": "Abrir en una nueva pestaña"
+  },
+  "tags": {
+    "add_tag": "Añadir Etiqueta"
+  }
+}

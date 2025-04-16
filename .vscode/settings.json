@@ -1,0 +1,15 @@
+{
+  "i18n-ally.localesPaths": ["public/locales", "src/i18n"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "prettier.useEditorConfig": true,
+  "prettier.requireConfig": true,
+  "prettier.prettierPath": "./node_modules/prettier"
+}
