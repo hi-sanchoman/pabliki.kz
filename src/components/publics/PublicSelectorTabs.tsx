@@ -50,7 +50,7 @@ export function PublicSelectorTabs() {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto pt-20">
+    <div className="w-full max-w-6xl mx-auto">
       <Tabs defaultValue="by-region" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-4">
           <TabsTrigger value="by-region">ПОДБОРКА ПАБЛИКОВ</TabsTrigger>
