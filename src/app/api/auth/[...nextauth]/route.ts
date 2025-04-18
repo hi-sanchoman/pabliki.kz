@@ -31,15 +31,18 @@ interface ExtendedSession {
 }
 
 // Initialize Supabase client for auth
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 const handler = NextAuth({
-  adapter: SupabaseAdapter({
-    url: process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    secret: process.env.NEXTAUTH_SECRET!,
-  }),
+  adapter:
+    process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXTAUTH_SECRET
+      ? SupabaseAdapter({
+          url: process.env.NEXT_PUBLIC_SUPABASE_URL,
+          secret: process.env.NEXTAUTH_SECRET,
+        })
+      : undefined,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,

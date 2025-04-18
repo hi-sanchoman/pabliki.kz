@@ -1,0 +1,198 @@
+@import 'tailwindcss';
+
+/* Container styling */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+}
+
+/* Custom theme variables matching the original landing page */
+:root {
+  /* Colors with HSL values matching the original landing page */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 221 83% 53%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 221 83% 53%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 89.8%;
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+/* Root landing page styling for entire section */
+.landing-page-root {
+  background-color: white;
+}
+
+/* Styling for the landing page wrapper */
+.landing-page {
+  background-color: white;
+  color: hsl(var(--foreground));
+}
+
+/* Button custom styling */
+.landing-page button {
+  border: none !important;
+}
+
+/* Base styling elements */
+.landing-page * {
+  border-color: hsl(var(--border));
+}
+
+/* Fix for border colors on all elements */
+.landing-page *[class*='border'] {
+  border-color: hsl(var(--border));
+}
+
+/* Force black borders to be gray */
+.landing-page *[style*='border-color: black'] {
+  border-color: hsl(var(--border)) !important;
+}
+
+.landing-page *[style*='border: 1px solid black'] {
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+/* Make sure headers have proper styling */
+.landing-page h1,
+.landing-page h2,
+.landing-page h3,
+.landing-page h4 {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+/* Card styling */
+.landing-page .card {
+  background-color: white;
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+}
+
+/* Calendar customization */
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+}
+
+.rdp-day_selected,
+.rdp-day_selected:hover {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Embla carousel styles */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Fix border colors */
+.landing-page *[class*='border'] {
+  border-color: hsl(var(--border));
+}
+
+/* Fix background colors */
+.landing-page *[class*='bg-background'] {
+  background-color: white;
+}
+
+/* Fix primary color */
+.landing-page *[class*='bg-primary'] {
+  background-color: hsl(221, 83%, 53%);
+}
+
+/* Fix hover effects */
+.landing-page *[class*='hover:bg-primary'] {
+  transition: background-color 0.2s ease-in-out;
+}
+.landing-page *[class*='hover:bg-primary']:hover {
+  background-color: hsl(221, 83%, 45%);
+}
+
+.landing-page *[class*='hover:text-primary'] {
+  transition: color 0.2s ease-in-out;
+}
+.landing-page *[class*='hover:text-primary']:hover {
+  color: hsl(221, 83%, 53%);
+}
+
+/* Hero section text color fixes */
+.landing-page [class*='hero-section'] h1,
+.landing-page [class*='hero-section'] h2,
+.landing-page [class*='hero-section'] p {
+  color: white !important;
+}
+
+/* Button text fixes for the main CTA button */
+.landing-page [class*='cta-button'],
+.landing-page [class*='cta-section'] button {
+  color: white !important;
+}
+
+/* Blue backgrounds should always have white text content */
+.landing-page [style*='background-color'] [class*='text-'] {
+  color: inherit !important;
+}
+
+/* Text override for elements with blue backgrounds from inline styles */
+.landing-page [style*='background-color: #3b82f6'],
+.landing-page [style*='background-color: rgb(59, 130, 246)'],
+.landing-page [style*='background-color: rgba(59, 130, 246'],
+.landing-page [style*='background-color: hsl(221, 83%, 53%)'] {
+  color: white !important;
+}
+
+/* Fix specifically for the blue banner at the top */
+.landing-page span.bg-blue-600 {
+  color: white !important;
+}
+
+/* Fix for the main CTA button */
+.landing-page [class*='btn-primary'],
+.landing-page a[class*='bg-primary'],
+.landing-page button[class*='bg-primary'] {
+  color: white !important;
+}
+
+/* Fix for any card with a blue background */
+.landing-page .card[class*='bg-primary'],
+.landing-page .card[class*='bg-blue'] {
+  color: white !important;
+}
+
+/* Fix for all children of elements with explicit blue backgrounds */
+.landing-page [style*='background-color: #3b82f6'] *,
+.landing-page [style*='background-color: rgb(59, 130, 246)'] *,
+.landing-page [style*='background-color: hsl(221, 83%, 53%)'] * {
+  color: white !important;
+}

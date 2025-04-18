@@ -1,0 +1,260 @@
+/* UI Component Fixes for Landing Page */
+
+/* Fix border colors on buttons */
+.landing-page button[class*='border'] {
+  border-color: #e5e7eb !important;
+}
+
+/* Fix text colors */
+.landing-page [class*='text-foreground'] {
+  color: #111827 !important;
+}
+
+/* Fix card backgrounds */
+.landing-page [class*='bg-card'] {
+  background-color: white !important;
+}
+
+/* Fix navigation menu colors */
+.landing-page [role='navigation'] {
+  background-color: white !important;
+}
+
+/* Fix dropdown menu colors */
+.landing-page [role='menu'] {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Fix checkbox colors */
+.landing-page [type='checkbox'] {
+  color: hsl(221, 83%, 53%) !important;
+}
+
+/* Fix popover colors */
+.landing-page [role='dialog'] {
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Fix tooltip colors */
+.landing-page [role='tooltip'] {
+  color: #111827 !important;
+  background-color: white !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Primary button styling */
+.landing-page button[class*='bg-primary'] {
+  background-color: hsl(221, 83%, 53%) !important;
+  color: white !important;
+}
+
+.landing-page button[class*='bg-primary']:hover {
+  background-color: hsl(221, 83%, 45%) !important;
+}
+
+/* Outline button styling */
+.landing-page button[class*='variant-outline'] {
+  border-color: #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.landing-page button[class*='variant-outline']:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Ensure text on blue backgrounds is white */
+.landing-page [class*='bg-primary'] * {
+  color: white !important;
+}
+
+.landing-page [class*='bg-blue'] * {
+  color: white !important;
+}
+
+/* FIXED: Only color the icons on blue backgrounds white, but preserve their original style */
+.landing-page [class*='bg-primary'] svg {
+  color: white !important;
+}
+
+.landing-page [class*='bg-blue'] svg {
+  color: white !important;
+}
+
+/* Don't force fill and stroke to be white - this causes outline icons to be filled */
+/* REMOVED:
+  fill: white !important;
+  stroke: white !important;
+*/
+
+/* Specific text colors for elements with white text */
+.landing-page [class*='text-white'] {
+  color: white !important;
+}
+
+.landing-page [class*='text-primary-foreground'] {
+  color: white !important;
+}
+
+/* Fix for specific components like buttons, cards, etc. with blue backgrounds */
+.landing-page .bg-blue-600,
+.landing-page .bg-primary,
+.landing-page [class*='bg-blue-'],
+.landing-page [class*='bg-primary'] {
+  color: white !important;
+}
+
+/* Ensure links on blue backgrounds have white text */
+.landing-page [class*='bg-primary'] a,
+.landing-page [class*='bg-blue'] a {
+  color: white !important;
+}
+
+/* Fix for text in buttons */
+.landing-page button[class*='bg-primary'] > span,
+.landing-page button[class*='bg-blue'] > span {
+  color: white !important;
+}
+
+/* Only set color for SVG elements on blue backgrounds, don't force fill/stroke */
+.landing-page [style*='background-color: hsl(221, 83%, 53%)'] svg,
+.landing-page [style*='background-color: #3b82f6'] svg {
+  color: white !important;
+}
+/* REMOVED:
+  fill: white !important;
+  stroke: white !important;
+*/
+
+/* Target all SVGs (icons) within active tab triggers */
+.landing-page [data-state='active'] svg {
+  color: white !important;
+}
+/* REMOVED:
+  fill: white !important;
+  stroke: white !important;
+*/
+
+/* Make sure all text content is white in blue buttons */
+.landing-page button.bg-primary *,
+.landing-page button.bg-blue-600 * {
+  color: white !important;
+}
+
+/* Additional fixes for active tabs and buttons */
+.landing-page [data-state='active'] span,
+.landing-page [data-state='active'] p,
+.landing-page [data-state='active'] div {
+  color: white !important;
+}
+
+/* Fix for any lucide icons used within blue backgrounds - use color only */
+.landing-page .bg-primary svg,
+.landing-page .bg-blue-600 svg,
+.landing-page button.bg-primary svg,
+.landing-page button.bg-blue-600 svg {
+  color: white !important;
+}
+/* REMOVED:
+  stroke: white !important;
+*/
+
+/* Ensure navigation menu active items have white text */
+.landing-page [role='navigation'] [data-state='active'],
+.landing-page [role='tablist'] [data-state='active'] {
+  color: white !important;
+}
+
+/* High-specificity rule for blue background with white text */
+.landing-page .bg-blue-600,
+.landing-page .bg-primary,
+.landing-page [class*='bg-blue-'],
+.landing-page [class*='bg-primary'],
+.landing-page [style*='background-color: #3b82f6'],
+.landing-page [style*='background-color: rgb(59, 130, 246)'],
+.landing-page [style*='background-color: hsl(221, 83%, 53%)'] {
+  color: white !important;
+}
+
+/* Ensure eye icons remain as outlines */
+.landing-page svg[data-lucide='Eye'],
+.landing-page svg[data-icon='eye'] {
+  fill: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Fix for any eye icons in buttons */
+.landing-page button svg[data-lucide='Eye'],
+.landing-page button svg[data-icon='eye'] {
+  fill: none !important;
+  stroke: currentColor !important;
+  background-color: transparent !important;
+}
+
+/* Ensure Lucide icons keep their outline style by default */
+.landing-page svg[data-lucide] {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+/* More targeted fixes for Lucide icons */
+.landing-page svg.lucide,
+.landing-page svg[data-lucide] {
+  fill: none !important; /* Ensure no fill unless explicitly overridden */
+}
+
+.landing-page svg.lucide path,
+.landing-page svg[data-lucide] path,
+.landing-page svg.lucide circle,
+.landing-page svg[data-lucide] circle,
+.landing-page svg.lucide line,
+.landing-page svg[data-lucide] line,
+.landing-page svg.lucide polyline,
+.landing-page svg[data-lucide] polyline,
+.landing-page svg.lucide rect,
+.landing-page svg[data-lucide] rect {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
+/* Only apply white stroke/color for icons on blue backgrounds */
+.landing-page .bg-primary svg.lucide,
+.landing-page .bg-blue-600 svg.lucide,
+.landing-page button.bg-primary svg.lucide,
+.landing-page button.bg-blue-600 svg.lucide,
+.landing-page [data-state='active'] svg.lucide {
+  stroke: white !important;
+  color: white !important;
+}
+
+.landing-page .bg-primary svg.lucide path,
+.landing-page .bg-blue-600 svg.lucide path,
+.landing-page button.bg-primary svg.lucide path,
+.landing-page button.bg-blue-600 svg.lucide path,
+.landing-page [data-state='active'] svg.lucide path {
+  stroke: white !important;
+}
+
+/* Fix tab styling for better contrast between selected/unselected */
+.landing-page [role='tablist'] [data-state='inactive'] {
+  color: #4b5563 !important; /* Gray-600 for better visibility */
+  background-color: transparent !important;
+}
+
+.landing-page [role='tablist'] [data-state='inactive'] svg {
+  color: #4b5563 !important; /* Match the text color */
+  stroke: #4b5563 !important;
+}
+
+.landing-page [role='tablist'] [data-state='inactive'] span,
+.landing-page [role='tablist'] [data-state='inactive'] p,
+.landing-page [role='tablist'] [data-state='inactive'] div {
+  color: #4b5563 !important;
+}
+
+/* Make sure active tabs stand out with proper blue background */
+.landing-page [role='tablist'] [data-state='active'] {
+  background-color: hsl(221, 83%, 53%) !important;
+  color: white !important;
+}

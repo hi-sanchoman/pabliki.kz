@@ -1,0 +1,8 @@
+; Add this to .eslintrc.json
+{
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "@typescript-eslint/no-empty-object-type": ["warn"],
+    "@next/next/no-img-element": ["warn"]
+  }
+}
