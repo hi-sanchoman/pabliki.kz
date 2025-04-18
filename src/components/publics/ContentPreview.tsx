@@ -3,17 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
-import {
-  format,
-  addDays,
-  getDaysInMonth,
-  startOfMonth,
-  getDay,
-  isToday,
-  isBefore,
-  isAfter,
-} from 'date-fns';
+import { format, addDays, getDaysInMonth, startOfMonth, getDay, isToday, isBefore } from 'date-fns';
 import { ru } from 'date-fns/locale';
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -165,6 +155,7 @@ export function ContentPreview({ contentType, description, file, link }: Content
                   <div className="aspect-square bg-blue-100 flex items-center justify-center relative">
                     {file ? (
                       file.type.startsWith('image/') ? (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={URL.createObjectURL(file)}
                           alt="Preview"
@@ -279,6 +270,7 @@ export function ContentPreview({ contentType, description, file, link }: Content
                     </div>
                     {file ? (
                       file.type.startsWith('image/') ? (
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={URL.createObjectURL(file)}
                           alt="Preview"

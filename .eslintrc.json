@@ -1,0 +1,23 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-object-type": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/components/common/**/*.tsx",
+        "src/components/layout/**/*.tsx",
+        "src/components/publics/**/*.tsx",
+        "src/components/ui/**/*.tsx"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@next/next/no-img-element": "off",
+        "@typescript-eslint/no-empty-object-type": "off"
+      }
+    }
+  ]
+}

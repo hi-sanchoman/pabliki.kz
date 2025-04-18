@@ -130,7 +130,7 @@ export function CaseStudiesSection() {
         <div className="text-center mb-24">
           <Button
             size="lg"
-            variant="primary"
+            variant="default"
             className="bg-blue-500 hover:bg-blue-600 text-white gap-2"
             asChild
           >

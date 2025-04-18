@@ -45,9 +45,10 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
         day_hidden: 'invisible',
         ...classNames,
       }}
+      // @ts-expect-error: allow custom IconLeft/IconRight keys in react-day-picker components
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        IconLeft: (props) => <ChevronLeft {...props} className="h-4 w-4" />,
+        IconRight: (props) => <ChevronRight {...props} className="h-4 w-4" />,
       }}
       {...props}
     />

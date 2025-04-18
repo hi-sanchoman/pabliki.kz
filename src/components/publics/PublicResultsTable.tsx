@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card } from '@/components/ui/card';
 import { Public } from './filterForm/PublicSelectorButton';
+import Image from 'next/image';
 
 interface PublicResultsTableProps {
   publics: Public[];
@@ -82,15 +83,18 @@ export function PublicResultsTable({
             </div>
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
-                <img
-                  src={pub.avatar}
-                  alt={pub.name}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/next.svg';
-                  }}
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src={pub.avatar}
+                    alt={pub.name}
+                    fill
+                    className="object-cover"
+                    sizes="32px"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/next.svg';
+                    }}
+                  />
+                </div>
               </div>
               <div className="text-sm">{pub.name}</div>
             </div>

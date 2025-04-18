@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
+import Image from 'next/image';
 
 // Import the components properly when they're compiled
 // import { PublicResult } from './PublicResult';
@@ -87,14 +88,15 @@ function PublicResult({ avatar, name, subscribers, monthlyReach, costPerPost }: 
             />
           </svg>
         </button>
-        <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
-          <img
+        <div className="w-10 h-10 rounded-full bg-gray-300 overflow-hidden relative">
+          <Image
             src={avatar}
             alt={name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="40px"
             onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = '/next.svg';
+              (e.target as HTMLImageElement).src = '/next.svg';
             }}
           />
         </div>

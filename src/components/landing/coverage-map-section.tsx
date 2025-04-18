@@ -1,5 +1,6 @@
 'use client';
 
+import * as React from 'react';
 import { useState } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import { AspectRatio } from '@/components/landing/ui/aspect-ratio';
@@ -53,6 +54,7 @@ function CityMarker({
         </div>
 
         {/* Expanded Card */}
+        {/* @ts-expect-error animated transform value assignment */}
         <animated.div
           style={{
             transform: spring.scale.to((s) => `scale(${s})`),

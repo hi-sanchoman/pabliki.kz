@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from '@/components/landing/ui/link';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const resources = [

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Play } from 'lucide-react';
+import Image from 'next/image';
 
 interface VideoPlayerProps {
   videoUrl: string;
@@ -11,6 +12,7 @@ interface VideoPlayerProps {
 
 export function VideoPlayer({ videoUrl, thumbnailUrl, className = '' }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [imgSrc, setImgSrc] = useState(thumbnailUrl);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
@@ -23,14 +25,13 @@ export function VideoPlayer({ videoUrl, thumbnailUrl, className = '' }: VideoPla
           className="relative w-full aspect-video cursor-pointer bg-blue-100 rounded-lg"
           onClick={handlePlayClick}
         >
-          <img
-            src={thumbnailUrl}
+          <Image
+            src={imgSrc}
             alt="Video thumbnail"
-            className="w-full h-full object-cover rounded-lg"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = 'https://placehold.co/800x450/e2e8f0/a0aec0?text=Video';
-            }}
+            fill
+            className="object-cover rounded-lg"
+            sizes="100vw"
+            onError={() => setImgSrc('https://placehold.co/800x450/e2e8f0/a0aec0?text=Video')}
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="p-4 rounded-full bg-blue-500/80 text-white">

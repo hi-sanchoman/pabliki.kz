@@ -4,6 +4,7 @@ import { Carousel, CarouselSlide } from '@/components/common/Carousel';
 import { landingConstants } from '@/constants/landing';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function HeroSlider() {
   const slides: CarouselSlide[] = landingConstants.slider.map((slide) => ({
@@ -11,13 +12,14 @@ export function HeroSlider() {
     content: (
       <div className="relative w-full aspect-[21/9] flex items-center justify-center bg-blue-100 rounded-lg">
         {/* Background image */}
-        <img
+        <Image
           src={slide.imageUrl}
           alt={slide.title}
-          className="w-full h-full object-contain"
+          fill
+          className="object-contain"
+          sizes="100vw"
           onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = '/hero-section-phone-image2.png';
+            (e.target as HTMLImageElement).src = '/hero-section-phone-image2.png';
           }}
         />
         {/* Content overlay */}
